@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listings</title>
+    <link rel="stylesheet" href="static\css\style.css">
+</head>
+<body>
+    <h1>Listings</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Summary</th>
+            <th>Description</th>
+            <th>Neighbourhood</th>
+            <th>City</th>
+            <th>Accommodates</th>
+            <th>Bathrooms</th>
+            <th>Bedrooms</th>
+            <th>Beds</th>
+            <th>Type</th>
+            <th>Price</th>
+        </tr>
+        {% for listing in listings %}
+        <tr>
+            <td>{{ listing[0] }}</td> 
+            <td>{{ listing[4] }}</td>
+            <td>{{ listing[5] }}</td> 
+            <td>{{ listing[7] }}</td> 
+            <td>{{ listing[24] }}</td> 
+            <td>{{ listing[26] }}</td> 
+            <td>{{ listing[32] }}</td> 
+            <td>{{ listing[36] }}</td> 
+            <td>{{ listing[37] }}</td> 
+            <td>{{ listing[38] }}</td> 
+            <td>{{ listing[39] }}</td> 
+            <td>{{ listing[42] }}</td> 
+        </tr>
+        <tr>
+            <td colspan="12"></td>
+        </tr>
+        <tr>
+            <td colspan="12">
+                <form action="/recommend_listing" method="post">
+                    <input type="hidden" name="neighborhood" value="{{ listing[24] }}">
+                    <button type="submit" class="recommend-btn">Recommend</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

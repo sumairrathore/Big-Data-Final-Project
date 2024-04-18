@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Listing</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="static\css\style.css">
+</head>
+<body>
+    <div class="container">
+
+    <h1>Recommended Listing</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Summary</th>
+            <th>Description</th>
+            <th>Neighbourhood</th>
+            <th>City</th>
+            <th>Accommodates</th>
+            <th>Bathrooms</th>
+            <th>Bedrooms</th>
+            <th>Beds</th>
+            <th>Bed Type</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>{{ recommended_listing[0] }}</td>
+            <td>{{ recommended_listing[4] }}</td>
+            <td>{{ recommended_listing[5] }}</td>
+            <td>{{ recommended_listing[7] }}</td>
+            <td>{{ recommended_listing[24] }}</td>
+            <td>{{ recommended_listing[26] }}</td>
+            <td>{{ recommended_listing[32] }}</td>
+            <td>{{ recommended_listing[36] }}</td>
+            <td>{{ recommended_listing[37] }}</td>
+            <td>{{ recommended_listing[38] }}</td>
+            <td>{{ recommended_listing[39] }}</td>
+            <td>{{ recommended_listing[42] }}</td>
+        </tr>
+    </table>
+    <div id="map"></div>
+    
+    <a href="/show_listings">Back to Listings</a>
+</div>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="static\js\logic.js"></script>
+</body>
+</html>
